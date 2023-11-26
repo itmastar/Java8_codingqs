@@ -42,4 +42,14 @@ public class Employee {
         this.dept = dept;
         this.sal = sal;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", dept='" + dept + '\'' +
+                ", sal=" + sal +
+                '}';
+    }
 }

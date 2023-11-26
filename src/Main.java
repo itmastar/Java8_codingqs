@@ -111,6 +111,51 @@ public class Main {
                 System.out.println(groupByDEPT);
                 Map<String, Optional<Employee>> groupByMaxSaldeptwise = empList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.reducing(BinaryOperator.maxBy(compareBySAL))));
                 System.out.println(groupByMaxSaldeptwise);
+
+
+        //List<String> words = Arrays.asList("apple", "banana", "orange", "kiwi", "pear");
+        //Output: {5=1, 6=2, 4=2}
+
+        /*List<String> words = Arrays.asList("apple", "banana", "orange", "kiwi", "pear");
+        Map<Integer, Long> collect = words.stream().collect(Collectors.groupingBy(String::length, Collectors.counting()));
+
+
+        System.out.println(collect);*/
+
+        /*import java.util.Arrays;
+
+public class CodingTest {
+
+    public static void main(String[] args) {
+        int[] arr = {2, 5, 7, 9, 4};
+        int target = 13;
+        int[] ints = myFunction(arr, target);
+        System.out.println(Arrays.toString(ints));
+    }
+
+    public static int[] myFunction(int[] arr, int target) {
+        int[] arr1=new int[2];
+        for (int i = 0; i < arr.length; i++) { //0,1,2,3,4
+            for (int j = 1; j < arr.length - 1; j++) {//1,2,3,4  //0,1 0,2 0,3 ...1,1 ...1,2 ..4,4
+                if (arr[i] + arr[j] == target) {
+                    arr1[0]=i;
+                    arr1[1]=j;
+
+                }
+            }
+        }
+        return arr1;
+    }
+}*/
+
+        /*
+        List<String> names=new ArrayList<>();
+        names= Arrays.asList("Singh", "Mohan", "manas", "Adam");
+        names.stream().filter(s->s.contains("S")|| s.contains("s")).collect(Collectors.toList()).forEach(System.out::println);
+
+        names.stream().map(s->new StringBuilder(s).reverse()).forEach(System.out::println);
+        */
+
             }
         }
 
